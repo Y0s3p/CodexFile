@@ -30,18 +30,10 @@ public class Fichero_pantalla {
 
                     //leer caracter a caracter
                     while( (i = fread.read()) != -1){
-                        System.out.println(i);
 
-                        int asci = (int) ((char) i);
+                        int j = i + (i/10);
 
-                        int j = i + (i/10))
-
-
-                        (char) j
-
-                        asci = (asci/10)+asci;
-
-                        fwrite.write(Character.toString ((char) asci));
+                        fwrite.write(Character.toString ((char) j));
 
                     }
 
