@@ -1,0 +1,31 @@
+import java.io.*;
+
+public class Fichero_pantalla {
+
+    public static void main(String[] args) throws IOException {
+
+        String fichero = "D:\\Proyectos Programacion\\Proyectos_IntelliJ\\Ejercicio_06\\src\\Fichero_pantalla.java";
+        int i = 0;
+        //declarar fichero
+        File fich = new File(fichero);
+        //crear flujo etrada
+        FileReader fread = new FileReader(fich);
+        //Declarar fichero contenedor
+        FileWriter fwrite = new FileWriter("D:\\Proyectos Programacion\\Proyectos_IntelliJ\\Ejercicio_06\\src\\text.txt");
+
+//        BufferedWriter f_in = new BufferedWriter(fwrite);
+
+        //leer caracter a caracter
+        while( (i = fread.read()) != -1){
+
+            fwrite.write((char) i);
+
+        }
+
+        //cerrar el flujo
+        fread.close();
+        fwrite.close();
+
+    }
+
+}
